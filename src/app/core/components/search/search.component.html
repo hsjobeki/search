@@ -3,7 +3,6 @@
   @if ((scopes | async); as scopes) {
     @if (scopes.length > 1) {
       <feel-dropdown formControlName="scope" label="Scope">
-        <option value="-1">All</option>
         @for (scope of scopes; track scope; let idx = $index) {
           <option [value]="idx.toString()">
             {{scope}}
