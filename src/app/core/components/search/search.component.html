@@ -4,7 +4,7 @@
     @if (scopes.length > 1) {
       <feel-dropdown formControlName="scope" label="Scope">
         @for (scope of scopes; track scope; let idx = $index) {
-          <option [value]="idx.toString()">
+          <option [value]="(idx -1).toString()">
             {{scope}}
           </option>
         }
